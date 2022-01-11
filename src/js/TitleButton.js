@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function TitleButton(props) {
+const TitleButton = props => {
   let navigate = useNavigate();
 
   return (
