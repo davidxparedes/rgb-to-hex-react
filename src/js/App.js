@@ -1,10 +1,9 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
-// import TitleButton from '../js/TitleButton';
-// import HexToRGB from '../js/HexToRGB';
+import { Route, Routes, useNavigate } from "react-router-dom";
 import RGBToHex from '../js/RGBToHex';
+import HexToRGB from '../js/HexToRGB';
+import NotFound from '../js/NotFound';
 // import logo from './logo.svg';
-// import '.css/App.css';
 
 function App() {
   // to change routes on TitleButton.js
@@ -28,21 +27,11 @@ function App() {
 
   return (
     <div className="App">
-      <RGBToHex convertRGB={convertRGB} />
-    {/*  <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>*/}
+      <Routes>
+        <Route exact path="/" element={<RGBToHex convertRGB={convertRGB} copyToClipBoard={copyToClipBoard} />}  />
+        <Route exact path="/hex-to-rgb" element={<HexToRGB copyToClipBoard={copyToClipBoard} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
