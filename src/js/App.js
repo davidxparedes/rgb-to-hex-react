@@ -9,20 +9,11 @@ function App() {
   // to change routes on TitleButton.js
   let navigate = useNavigate();
 
-  const copyToClipBoard = e => {
-    // e.preventDefault();
-    const convertedValue = e.target.getAttribute("data-converted-value");
-    console.log(convertedValue);
-
-    const ukTooltip = e.target.attributes.getNamedItem('uk-tooltip').value;
-    console.log(ukTooltip);
-  }
-
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<RGBToHex copyToClipBoard={copyToClipBoard} />}  />
-        <Route exact path="/hex-to-rgb" element={<HexToRGB copyToClipBoard={copyToClipBoard} />} />
+        <Route exact path="/" element={<RGBToHex />}  />
+        <Route exact path="/hex-to-rgb" element={<HexToRGB />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

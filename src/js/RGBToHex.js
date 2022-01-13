@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TitleButton from '../js/TitleButton';
+import CopyToClipboard from '../js/CopyToClipboard';
 
 // function RGBToHex(props) {
 const RGBToHex = props => {
@@ -43,8 +44,8 @@ const RGBToHex = props => {
     let converted = rgbToHex(red, green, blue);
     setConvertedValue(converted);
 
-    console.log('rgb',red,green,blue);
-    console.log(converted);
+    // console.log('rgb',red,green,blue);
+    // console.log(converted);
     // e.currentTarget.reset(); set state to blank to reset
   }
 
@@ -81,15 +82,7 @@ const RGBToHex = props => {
       </div>
       <span className="swatch uk-padding-small"></span>
       <span id="convertedValue" className="uk-margin-left uk-margin-right uk-text-large">{convertedValue}</span>
-      <button 
-        onClick={props.copyToClipBoard}
-        id="copyBtn"
-        className="material-icons uk-button uk-button-link uk-text-muted"
-        data-converted-value = "#ffffff"
-        uk-tooltip="copy #ffffff"
-      >
-        content_copy
-      </button>
+      <CopyToClipboard convertedValue={convertedValue} />
     </div>
   )
 }
