@@ -6,6 +6,7 @@ const RGBToHex = props => {
   const [red, setRed] = useState('');
   const [green, setGreen] = useState('');
   const [blue, setBlue] = useState('');
+  const [convertedValue, setConvertedValue] = useState('#ffffff');
 
   let RGBformElements = [{
     label: 'Red',
@@ -39,10 +40,11 @@ const RGBToHex = props => {
   const onSubmitRGB = (e) => {
     e.preventDefault();
     
-    let convertedValue = rgbToHex(red, green, blue);
+    let converted = rgbToHex(red, green, blue);
+    setConvertedValue(converted);
+
     console.log('rgb',red,green,blue);
-    // console.log(e);
-    console.log(convertedValue);
+    console.log(converted);
     // e.currentTarget.reset(); set state to blank to reset
   }
 
@@ -78,7 +80,7 @@ const RGBToHex = props => {
         </form>
       </div>
       <span className="swatch uk-padding-small"></span>
-      <span id="convertedValue" className="uk-margin-left uk-margin-right uk-text-large">#ffffff</span>
+      <span id="convertedValue" className="uk-margin-left uk-margin-right uk-text-large">{convertedValue}</span>
       <button 
         onClick={props.copyToClipBoard}
         id="copyBtn"
