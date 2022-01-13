@@ -9,13 +9,6 @@ function App() {
   // to change routes on TitleButton.js
   let navigate = useNavigate();
 
-  // RGB to HEX form
-  const convertRGB = (e) => {
-    e.preventDefault();
-    e.currentTarget.reset();
-    console.log('RGB form submitted and reset');
-  }
-
   const copyToClipBoard = e => {
     // e.preventDefault();
     const convertedValue = e.target.getAttribute("data-converted-value");
@@ -28,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={<RGBToHex convertRGB={convertRGB} copyToClipBoard={copyToClipBoard} />}  />
+        <Route exact path="/" element={<RGBToHex copyToClipBoard={copyToClipBoard} />}  />
         <Route exact path="/hex-to-rgb" element={<HexToRGB copyToClipBoard={copyToClipBoard} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
