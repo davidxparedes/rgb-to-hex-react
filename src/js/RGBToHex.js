@@ -24,12 +24,25 @@ const RGBToHex = props => {
     onChange: setBlue
   }]
 
+  const componentToHex = (c) => {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+  }
+
+  const rgbToHex = (r, g, b) => {
+    return "#" + componentToHex(parseInt(r)) 
+               + componentToHex(parseInt(g)) 
+               + componentToHex(parseInt(b));
+  }
+
   // RGB to HEX form
   const onSubmitRGB = (e) => {
     e.preventDefault();
     
-    console.log(red,green,blue);
-    console.log(RGBformElements);
+    let convertedValue = rgbToHex(red, green, blue);
+    console.log('rgb',red,green,blue);
+    // console.log(e);
+    console.log(convertedValue);
     // e.currentTarget.reset(); set state to blank to reset
   }
 
