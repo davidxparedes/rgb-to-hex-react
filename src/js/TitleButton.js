@@ -1,15 +1,19 @@
-const CopyToClipboard = props => {
+import { useNavigate } from "react-router-dom";
+
+const TitleButton = props => {
+  let navigate = useNavigate();
+
   return (
-    <button 
-        onClick={props.copyToClipBoard}
-        id="copyBtn"
-        className="material-icons uk-button uk-button-link uk-text-muted"
-        data-converted-value = "#ffffff"
-        uk-tooltip="copy #ffffff"
+    <h1 className="uk-margin-medium-bottom">{props.formTitle}
+      <button onClick={() => {
+                navigate(props.link);
+              }}
+              className="uk-button uk-button-link"
       >
-        content_copy
-    </button>
+        <span className="material-icons uk-text-muted">autorenew</span>
+      </button>
+    </h1>
   )
 }
 
-export default CopyToClipboard;
+export default TitleButton;
