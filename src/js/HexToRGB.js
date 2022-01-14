@@ -37,9 +37,9 @@ const HexToRGB = props => {
           <form onSubmit={onSubmitHex}>
             <fieldset className="uk-fieldset uk-margin-auto uk-flex uk-flex-column uk-width-1-2 uk-width-1-3@s">
               <label className="uk-form-label" htmlFor="hex">Hex</label>
-              <input id="hex" 
-                     className="uk-input uk-margin-small-bottom" 
-                     name="red" 
+              <input className="uk-input uk-margin-small-bottom" 
+                     id="hex"
+                     name="hex" 
                      type="input" 
                      minLength="3"
                      maxLength="6" 

@@ -2,12 +2,16 @@ const Converted = props => {
 
   const copyToClipboard = e => {
     navigator.clipboard.writeText(props.convertedValue);
-    console.log('copy clicked');
+  }
+  
+  const styles = {
+    backgroundColor: `${props.convertedValue}`,
+    border: '1px solid #666'
   }
 
   return (
     <>
-      <span style={{backgroundColor: `${props.convertedValue}`, border: '1px solid #666'}}
+      <span style={styles}
             className="uk-padding-small">
       </span>
       <span className="uk-margin-left uk-margin-right uk-text-large">{props.convertedValue}</span>

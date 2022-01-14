@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import TitleButton from '../js/TitleButton';
 import Converted from '../js/Converted';
-// import CopyToClipboard from '../js/CopyToClipboard';
 
 // function RGBToHex(props) {
 const RGBToHex = props => {
