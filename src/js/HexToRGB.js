@@ -30,30 +30,28 @@ const HexToRGB = props => {
   }
 
   return (
-    <div className="HexToRGB">
-      <div className="uk-container uk-flex uk-flex-wrap uk-flex-center uk-position-center">
-        <TitleButton formTitle="Hex to RGB" link="/" />
-        <div className="uk-width-1-1 uk-margin-medium-bottom">
-          <form onSubmit={onSubmitHex}>
-            <fieldset className="uk-fieldset uk-margin-auto uk-flex uk-flex-column uk-width-1-2 uk-width-1-3@s">
-              <label className="uk-form-label" htmlFor="hex">Hex</label>
-              <input className="uk-input uk-margin-small-bottom" 
-                     id="hex"
-                     name="hex" 
-                     type="input" 
-                     minLength="3"
-                     maxLength="6" 
-                     placeholder="ffffff" 
-                     required={true}
-                     value={hex}
-                     onChange={(e)=> {setHex(e.target.value)}}
-              />
-            </fieldset>
-            <input className="uk-button uk-align-center" name="submit" type="submit" value="Submit" />
-          </form>
-        </div>
-        <Converted convertedValue={convertedValue} />
+    <div className="uk-container uk-flex uk-flex-wrap uk-flex-center uk-position-center">
+      <TitleButton formTitle="Hex to RGB" link="/" />
+      <div className="uk-width-1-1 uk-margin-medium-bottom">
+        <form onSubmit={onSubmitHex}>
+          <fieldset className="uk-fieldset uk-margin-auto uk-flex uk-flex-column uk-width-1-2 uk-width-1-3@s">
+            <label className="uk-form-label" htmlFor="hex">Hex</label>
+            <input className="uk-input uk-margin-small-bottom" 
+                   id="hex"
+                   name="hex" 
+                   type="input" 
+                   minLength="3"
+                   maxLength="6" 
+                   placeholder="ffffff" 
+                   required={true}
+                   value={hex}
+                   onChange={(e)=> {setHex(e.target.value)}}
+            />
+          </fieldset>
+          <input className="uk-button uk-align-center" name="submit" type="submit" value="Submit" />
+        </form>
       </div>
+      <Converted convertedValue={convertedValue} />
     </div>
   )
 }
