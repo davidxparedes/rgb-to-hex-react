@@ -7,8 +7,9 @@ import NotFound from '../js/NotFound';
 const App = () => (
   <div className="App">
     <Routes>
-      <Route exact path="/" element={<RGBToHex />}  />
-      <Route path="/hex-to-rgb" element={<HexToRGB />} />
+      {/*<Route exact path="/" element={<RGBToHex />}  />*/}
+      <Route path="/rgb-to-hex-react/" element={<RGBToHex />} />
+      <Route path="/rgb-to-hex-react/hex-to-rgb" element={<HexToRGB />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </div>

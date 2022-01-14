@@ -47,7 +47,7 @@ const RGBToHex = props => {
 
   return (
     <div className="uk-container uk-flex uk-flex-wrap uk-flex-center uk-position-center">
-      <TitleButton formTitle="RGB to Hex" link="hex-to-rgb" />
+      <TitleButton formTitle="RGB to Hex" link="/rgb-to-hex-react/hex-to-rgb" />
       <div className="uk-width-1-1 uk-margin-medium-bottom">
         <form onSubmit={onSubmitRGB}>
           <fieldset className=" uk-width-2xlarge@m uk-fieldset uk-margin-auto">
