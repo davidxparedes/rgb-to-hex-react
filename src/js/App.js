@@ -8,7 +8,7 @@ const App = () => (
   <div className="App">
     <Routes>
       <Route exact path="/" element={<RGBToHex />}  />
-      <Route exact path="/hex-to-rgb" element={<HexToRGB />} />
+      <Route path="/hex-to-rgb" element={<HexToRGB />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </div>
