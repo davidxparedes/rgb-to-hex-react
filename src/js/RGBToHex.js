@@ -37,16 +37,12 @@ const RGBToHex = props => {
                + componentToHex(parseInt(b));
   }
 
-  // RGB to HEX form
+  // RGB to HEX form submit
   const onSubmitRGB = (e) => {
     e.preventDefault();
     
     let converted = rgbToHex(red, green, blue);
     setConvertedValue(converted);
-
-    // console.log('rgb',red,green,blue);
-    // console.log(converted);
-    // e.currentTarget.reset(); set state to blank to reset
   }
 
   return (
