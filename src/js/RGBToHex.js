@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TitleButton from '../js/TitleButton';
-import CopyToClipboard from '../js/CopyToClipboard';
+import Converted from '../js/Converted';
+// import CopyToClipboard from '../js/CopyToClipboard';
 
 // function RGBToHex(props) {
 const RGBToHex = props => {
@@ -76,9 +77,7 @@ const RGBToHex = props => {
           <input className="uk-button uk-align-center" name="submit" type="submit" value="Submit" />
         </form>
       </div>
-      <span className="swatch uk-padding-small"></span>
-      <span id="convertedValue" className="uk-margin-left uk-margin-right uk-text-large">{convertedValue}</span>
-      <CopyToClipboard convertedValue={convertedValue} />
+      <Converted convertedValue={convertedValue} />
     </div>
   )
 }
