@@ -10,7 +10,7 @@ const App = () => (
       {/*<Route exact path="/" element={<RGBToHex />}  />*/}
       <Route path="/rgb-to-hex-react/" element={<RGBToHex />} />
       <Route path="/rgb-to-hex-react/hex-to-rgb" element={<HexToRGB />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/rgb-to-hex-react/*" element={<NotFound />} />
     </Routes>
   </div>
 )
