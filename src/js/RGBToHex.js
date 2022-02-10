@@ -42,8 +42,6 @@ const RGBToHex = props => {
     setConvertedValue(converted);
   }
 
-  // {React.Children.toArray(myList.map(item => <div>Hello</div>))}
-
   return (
     <div className="uk-container uk-flex uk-flex-wrap uk-flex-center uk-position-center">
       <TitleButton formTitle="RGB to Hex" link="/rgb-to-hex-react/hex-to-rgb" />
