@@ -10,15 +10,15 @@ const RGBToHex = props => {
   const [convertedValue, setConvertedValue] = useState('#ffffff');
 
   let RGBformElements = [{
-    label: 'Red',
+    label: 'red',
     value: red,
     onChange: setRed
   }, {
-    label: 'Green',
+    label: 'green',
     value: green,
     onChange: setGreen
   }, {
-    label: 'Blue',
+    label: 'blue',
     value: blue,
     onChange: setBlue
   }]
@@ -51,8 +51,8 @@ const RGBToHex = props => {
             <div className="uk-column-1-1 uk-column-1-3@s">
               {React.Children.toArray(RGBformElements.map(formElement => {
                 return (
-                  <div>
-                    <label className="uk-form-label" htmlFor={formElement.label}>{formElement.label}</label>
+                  <>
+                    <label className="uk-form-label" htmlFor={formElement.label}>{formElement.label.charAt(0).toUpperCase() + formElement.label.slice(1)}</label>
                     <input id={formElement.label}
                            name={formElement.label}
                            className="uk-input uk-margin-small-bottom"
@@ -65,7 +65,7 @@ const RGBToHex = props => {
                            value={formElement.value}
                            onChange={(e)=> {formElement.onChange(e.target.value)}}
                     />
-                  </div>
+                  </>
                 )
               }))}
             </div>
